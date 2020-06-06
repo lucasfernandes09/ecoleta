@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1015165408892",
+    "firebase_url": "https://ecoleta-8b0d3.firebaseio.com",
+    "project_id": "ecoleta-8b0d3",
+    "storage_bucket": "ecoleta-8b0d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015165408892:android:8edc7793f1a75a491adbf9",
+        "android_client_info": {
+          "package_name": "com.app.ecoleta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015165408892-kc8u8j5snv3luj7jbeld2am97ai9bpim.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.ecoleta",
+            "certificate_hash": "fc9fb3ce1ecf2b8d2134870c371083d148d0f7f5"
+          }
+        },
+        {
+          "client_id": "1015165408892-i93bjefbh62uinau0occk6omkb541rvk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuTVZ9cLKoZM5B-zoT3YkMkQwC_cw992w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015165408892-i93bjefbh62uinau0occk6omkb541rvk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
