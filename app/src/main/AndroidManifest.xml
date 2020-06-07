@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".PesquisaActivity"
-            android:label="Pesquisar pontos de coleta" />
+            android:label="Pontos de coleta"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".PontoDeColetaActivity"
             android:label="Cadastre um ponto de coleta" />
