@@ -1,4 +1,4 @@
-package com.app.ecoleta;
+package com.app.ecoleta.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.ecoleta.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Objects;

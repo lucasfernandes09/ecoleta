@@ -1,4 +1,4 @@
-package com.app.ecoleta;
+package com.app.ecoleta.activities;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.ecoleta.R;
+import com.app.ecoleta.service.RetrofitService;
 import com.app.ecoleta.model.Cidades;
 import com.app.ecoleta.model.Estados;
 import com.app.ecoleta.model.PontoDeColeta;
@@ -34,8 +36,7 @@ public class PontoDeColetaActivity extends AppCompatActivity {
     private List<Cidades> listaDeCidades;
     private ChipGroup chipGroup;
     private List<String> itensDeColeta = new ArrayList<>();
-    private Spinner spnEstados;
-    private Spinner spnCidades;
+    private Spinner spnEstados, spnCidades;
     private PontoDeColeta pontoDeColeta = new PontoDeColeta();
 
     @Override
@@ -67,7 +68,7 @@ public class PontoDeColetaActivity extends AppCompatActivity {
             public void onResponse(Call<List<Estados>> call, Response<List<Estados>> response) {
                 if(response.isSuccessful()) {
                     listaDeEstados = response.body();
-                    popularEstados();
+                    configEstados();
                 }else {
                     Log.i("infoColeta", "erro na resposta: " + response.message());
                 }
@@ -75,12 +76,12 @@ public class PontoDeColetaActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Estados>> call, Throwable t) {
-
+                Log.i("infoColeta", "onFailure: " + t.getMessage());
             }
         });
     }
 
-    public void popularEstados() {
+    public void configEstados() {
         ArrayAdapter<Estados> adapterEstados = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, listaDeEstados);
         spnEstados.setAdapter(adapterEstados);
 
@@ -88,8 +89,8 @@ public class PontoDeColetaActivity extends AppCompatActivity {
         spnEstados.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Estados estado = listaDeEstados.get(position);
-                recuperarCidades(estado.getId());
+                Estados estados = listaDeEstados.get(position);
+                recuperarCidades(estados.getId());
             }
 
             @Override
@@ -108,7 +109,7 @@ public class PontoDeColetaActivity extends AppCompatActivity {
             public void onResponse(Call<List<Cidades>> call, Response<List<Cidades>> response) {
                 if(response.isSuccessful()) {
                     listaDeCidades = response.body();
-                    popularCidades();
+                    configCidades();
                 }else {
                     Log.i("infoColeta", "erro na resposta: " + response.message());
                 }
@@ -116,11 +117,12 @@ public class PontoDeColetaActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Cidades>> call, Throwable t) {
+                Log.i("infoColeta", "onFailure: " + t.getMessage());
             }
         });
     }
 
-    private void popularCidades() {
+    private void configCidades() {
         ArrayAdapter<Cidades> adapterCidades = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, listaDeCidades);
         spnCidades.setAdapter(adapterCidades);
     }

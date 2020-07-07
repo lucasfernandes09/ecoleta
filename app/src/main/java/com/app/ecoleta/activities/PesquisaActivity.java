@@ -1,4 +1,4 @@
-package com.app.ecoleta;
+package com.app.ecoleta.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.app.ecoleta.R;
 import com.app.ecoleta.adapter.AdapterPontosDeColeta;
 import com.app.ecoleta.model.PontoDeColeta;
 import com.google.firebase.database.DataSnapshot;

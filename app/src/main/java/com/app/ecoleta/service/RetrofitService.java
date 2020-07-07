@@ -1,4 +1,4 @@
-package com.app.ecoleta;
+package com.app.ecoleta.service;
 
 import com.app.ecoleta.model.Cidades;
 import com.app.ecoleta.model.Estados;
