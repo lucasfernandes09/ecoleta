@@ -6,8 +6,6 @@ Ecoleta
 <img src="screenShots/device-2020-07-31-181555.png" width=200 height=400> <img src="screenShots/device-2020-07-31-181616.png" width=200 height=400> <img src="screenShots/device-2020-07-31-181653.png" width=200 height=400> <img src="screenShots/device-2020-07-31-181754.png" width=200 height=400>
 
 # Sobre o projeto
-App desenvolvido adaptando projeto NLW da [RocketSeat](https://rocketseat.com.br/), inicialmente projetado para front-end web.
-
 O aplicativo se resume a fazer a conexão entre pontos de coleta de lixo presentes numa cidade e seus moradores. No app é possível achar um ponto de coleta próximo, como também é possível cadastrar uma empresa que trabalha com o serviço de coleta. O projeto foi agregador no sentido de poder fazer conexão com outros programadores através do discord.
 
 ## Contruído com
